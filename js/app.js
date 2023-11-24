@@ -4,7 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         title: 'PHP ToDo List JSON',
-        todos: ['JavaScript', 'PHP', 'HTML']
+        todos: ['Fare la spesa','Pulire casa',"Chiamare l'idraulico"]
       }
     }
   }).mount('#app')
