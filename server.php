@@ -1,25 +1,20 @@
 <?php
 
-// Dichiaro un array iniziale, il quale contenuto sono una serie di array associativi contenenti la proprietà 'required' che sarà un valore booleano e 'task' che sarà il nostro $todo
-$todos = [
-    [
-        "required" => true,
-        "task" => "Fare la spesa"
-    ],
-    [
-        "required" => true,
-        "task" => "Pulire casa"
-    ],
-    [
-        "required" => true,
-        "task" => "Chiamare l'idraulico"
-    ],
-];
+// Dopo aver creato un file json contenente l'array, importiamolo per renderlo disponibile nel server
+$todos_json = file_get_contents('./todos.json');
 
-// Conversione dell'array in un file json
+// Decodifichiamo il file
+$todos = json_decode($todos_json, true);
+
+
+
 header('Content-Type: application/json');
 
-// Stampa in pagina dell'array codificato
-echo json_encode($todos);
+$response = [
+    'success' => true,
+    'results' => $todos,
+];
+
+echo json_encode($response);
 
 ?>

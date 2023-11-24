@@ -1,0 +1,14 @@
+[
+    {
+        "done": true,
+        "task": "Fare la spesa"
+    },
+    {
+        "done": true,
+        "task": "Pulire casa"
+    },
+    {
+        "done": true,
+        "task": "Chiamare l'idraulico"
+    }
+]
