@@ -15,12 +15,18 @@
         <div class="container">
             <h1>{{ title }}</h1>
             <div class="new-todo">
-            <input type="text" v-model="newTodo" placeholder="Inserisci task">
+                <input type="text" v-model="newTodo" @keyup.enter="saveTodo" placeholder="Inserisci task">
             </div>
             <section>
-                <ul>
-                    <li v-for="(todo, i) in todos" :key="i">{{ todo.task }}</li>
-                </ul>
+                <div class="container">
+                    <ul class="todos">
+                        <li style="display: flex; justify-content: space-between; align-items: center;"
+                        v-for="(todo, i) in todos" :key="i">
+                            <span>{{ todo.task }}</span>
+                            <span class="delete">Elimina</span>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
     </div>

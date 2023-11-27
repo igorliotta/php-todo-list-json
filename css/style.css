@@ -4,17 +4,35 @@
     box-sizing: border-box;
 }
 
+ul, ol, menu {
+    list-style: none;
+}
+
 .container {
     max-width: 850px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: aquamarine;
 }
 
+h1 {
+    padding: 20px;
+}
+
+.todos__item.done {
+    text-decoration: line-through;
+}
+
 section {
-    padding: 70px 30px;
+    padding: 50px 30px;
 }
 
 .new-todo {
-    padding: 20px;
+    padding: 20px 20px;
 }
+
+
+
+
+
+
