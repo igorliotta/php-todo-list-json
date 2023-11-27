@@ -30,8 +30,28 @@ const { createApp } = Vue
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
+            }).then((res) => {
+                console.log(res.data)
+                this.todos = res.data.results
             })
+            this.newTodo = '';
         },
+        removeTodo(index) {
+            console.log('RIMUOVO TASK')
+
+            const data = {
+                id: index,
+            }
+
+            axios.post('remove.php', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            }).then((res) => {
+                console.log(res.data)
+                this.todos = res.data.results;
+            })
+        }
     },
     created() {
         this.fetchData()

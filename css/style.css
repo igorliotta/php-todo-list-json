@@ -12,23 +12,46 @@ ul, ol, menu {
     max-width: 850px;
     margin: 0 auto;
     padding: 50px 0;
-    background-color: aquamarine;
+    border:2px solid violet;
+    background-color: violet;
 }
 
 h1 {
     padding: 20px;
 }
 
-.todos__item.done {
-    text-decoration: line-through;
-}
 
-section {
-    padding: 50px 30px;
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .new-todo {
     padding: 20px 20px;
+}
+
+.text {
+    border:1px solid brown;
+    background-color: white;
+    text-align: center;
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid yellow;
+    background-color: white;
 }
 
 
